@@ -1,0 +1,20 @@
+[package]
+name = "ansi_image"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "ansi_image"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ansi_image"
+path = "src/main.rs"
+
+[dependencies]
+image = "0.23.14"
+terminal_size = "0.1.17"
+getopts = "0.2.21"
+unicode-segmentation = "1.8.0"
+log = "0.4.14"
+simple_logger = "1.16.0"
