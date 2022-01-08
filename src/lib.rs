@@ -1,10 +1,6 @@
-
-
-//use log::{debug, error, log_enabled, info, Level};
-use log::{debug, info, trace, warn};
-
-
 extern crate image;
+
+use log::debug;//{debug, info, trace, warn};
 use crate::image::GenericImageView;
 
 use unicode_segmentation::UnicodeSegmentation;
@@ -227,7 +223,7 @@ pub fn img_to_ansi(image_file: &str,
     let targ_w_ch = targ_w / font_w_px;
     let targ_h_ch = targ_h / font_h_px;
 
-    debug!("Target Size: {} {} pixels", targ_w_ch, targ_h_ch);
+    debug!("Target Size: {} {} characters", targ_w_ch, targ_h_ch);
 
     // Derive the bounds of the sample area.
     // Drive from long edge of the image.

@@ -1,15 +1,3 @@
-// TODO:
-// When file is a symlink? How to get length, etc. Will img lib read symlink?
-// Process more than one image file.
-// Output font size. default 8x16
-
-//
-// if let Err(err) = response {
-//    log::error!("Failed to execute query: {}", err);
-// }
-//
-
-// Hapiness 喜
 
 use unicode_segmentation::UnicodeSegmentation;
 use terminal_size::{Width, Height, terminal_size};
@@ -140,7 +128,7 @@ fn main() -> Result<(), AnsiImageError> {
     }
 
     if matches.free.is_empty() {
-        panic!("No image filename in arguments.");
+        panic!("No image filename in arguments. Run with --help to show usage.");
     }
 
     let out_char = match matches.opt_str("c"){
@@ -153,8 +141,6 @@ fn main() -> Result<(), AnsiImageError> {
     if out_char.graphemes(true).count() > 1 {
         panic!("Bad value for character: {}", out_char)
     }
-
-
 
     let filename = &matches.free[0];
 
