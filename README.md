@@ -29,12 +29,14 @@ Options:
 By default the image is rendered using spaces, but a character can be used instead with the `-c` parameter.
 
 ```./ansi_image -c `#` monal_lisa.jpg```
+
 ![](doc/images/char.png)
 
 ### -r Reverse
 This flag is useful with the `-c` flag. It renders the given character in the foreground colour, and the image with the background colour.
 
 ```./ansi_image -c -r `#` monal_lisa.jpg```
+
 ![](doc/images/reverse.png)
 
 ### -x -y Output Size
@@ -42,6 +44,7 @@ This flag is useful with the `-c` flag. It renders the given character in the fo
 By default, the image will take up the vertical space in the console. The size of the output, in charactes, can be given by the `-x` and `-y` parameters. The image aspect ratio will be maintained.
 
 ```./ansi_image -y 14 mona_lisa.jpg```
+
 ![](doc/images/small.png)
 
 ### --font-width --font-height
@@ -51,6 +54,7 @@ By default, the utility assumes the console characters are 8x16 pixels. If the c
 Being able to explicitly set the font size is also useful fro rendering non-ASCII UTF-8 characters, which may be wider.
 
 ```./ansi_image -c 喜 --font-width 12 mona_lisa.jpg```
+
 ![](doc/images/font-width.png)
 
 ### -v Verbose
